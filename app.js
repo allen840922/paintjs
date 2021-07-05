@@ -19,13 +19,9 @@ function onMouseUp(event) {
     stopPainting();
 }
 
-function onMouseLeave(event) {
-    paintg = false;
-}
-
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", onMouseDown);
     canvas.addEventListener("mouseup", onMouseUp);
-    canvas.addEventListener("mouseleave",onMouseLeave);
+    canvas.addEventListener("mouseleave",stopPainting);
 }
